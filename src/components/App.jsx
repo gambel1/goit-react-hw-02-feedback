@@ -7,9 +7,9 @@ import React from 'react';
 
 export default class App extends React.Component {
   static propTypes = {
-    good: PropTypes.number.isRequired,
-    neutral: PropTypes.number.isRequired,
-    bad: PropTypes.number.isRequired,
+    good: PropTypes.number,
+    neutral: PropTypes.number,
+    bad: PropTypes.number,
   };
 
   state = {
