@@ -1,9 +1,10 @@
+import { StaticticsListUl } from './Statictics.styled';
 import PropTypes from 'prop-types';
 
 export default function Statictics(props) {
   const { good, neutral, bad, total, positiveFeedback } = props;
   return (
-    <ul>
+    <StaticticsListUl>
       <li>
         <span>Good</span>
         <span>{good}</span>
@@ -22,9 +23,9 @@ export default function Statictics(props) {
       </li>
       <li>
         <span>Positive Feedback</span>
-        <span>{positiveFeedback}</span>
+        <span>{positiveFeedback} %</span>
       </li>
-    </ul>
+    </StaticticsListUl>
   );
 }
 

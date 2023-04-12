@@ -1,23 +1,25 @@
+import { FeedbackOptionsUl } from './FeedbackOptions.styled';
 import PropTypes from 'prop-types';
 export default function FeedbackOptions(props) {
-  const { totalsKeys, handleClickButton } = props;
+  const { feedbacksTitle, buttonClick } = props;
   return (
-    <ul>
-      {totalsKeys.map((totalKey, index) => {
-        const label = totalKey.charAt(0).toUpperCase() + totalKey.slice(1);
+    <FeedbackOptionsUl>
+      {feedbacksTitle.map((feedbackTitle, index) => {
+        const label =
+          feedbackTitle.charAt(0).toUpperCase() + feedbackTitle.slice(1);
         return (
           <li key={index}>
-            <button type="button" onClick={() => handleClickButton(totalKey)}>
+            <button type="button" onClick={() => buttonClick(feedbackTitle)}>
               {label}
             </button>
           </li>
         );
       })}
-    </ul>
+    </FeedbackOptionsUl>
   );
 }
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.string).isRequired,
-  handleClick: PropTypes.func.isRequired,
+  feedbacksTitle: PropTypes.arrayOf(PropTypes.string).isRequired,
+  buttonClick: PropTypes.func.isRequired,
 };
