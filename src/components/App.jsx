@@ -41,13 +41,13 @@ export default class App extends React.Component {
       totalFeedbackStat,
       good
     );
-    const feedbacksKey = Object.keys(this.state);
+    const options = Object.keys(this.state);
 
     return (
       <div>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            feedbacksTitle={feedbacksKey}
+            options={options}
             buttonClick={this.handleClickButton}
           />
         </Section>
